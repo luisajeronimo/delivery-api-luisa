@@ -8,10 +8,20 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
  
 import java.time.LocalDateTime;
 import java.util.Map;
- 
+
+@OpenAPIDefinition(
+    info = @Info(
+    title = "API de Clientes",
+    version = "1.0",
+    description = "Documentação da API para gerenciamento de clientes"
+)
+)
+
 @RestController
 @Tag(name = "Health Check", description = "Verifica o status da API e exibe informações do sistema")
 public class HealthController {
@@ -55,8 +65,8 @@ public class HealthController {
        return new AppInfo(
             "Delivery Tech API",
             "1.0.0",
-            "Anderson Buenos",
-            "JDK 17",
+            "Luisa Lima",
+            "JDK 21",
             "Spring Boot 3.5.3"
        );
     }
