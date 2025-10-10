@@ -1,5 +1,5 @@
 package com.deliverytech.delivery.repository;
 
-public class OrderRepository {
+public class IProductRepository {
 
 }
